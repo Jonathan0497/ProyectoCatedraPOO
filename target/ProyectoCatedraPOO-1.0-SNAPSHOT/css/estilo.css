@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5; /* Cambia el color de fondo */
+    height: 100vh;
+}
+
+#login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 320px;
+    border: 1px solid #CCCCCC; /* Cambia el color del borde */
+    background-color: #FFFFFF; /* Cambia el color de fondo */
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+}
+
+#login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+    color: #428bca; /* Cambia el color del enlace */
+}
