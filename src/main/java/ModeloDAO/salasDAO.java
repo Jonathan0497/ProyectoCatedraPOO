@@ -50,7 +50,6 @@ public class salasDAO {
         }
         return lista;
     }
-    //Hola Carlos Chupala tan rico como ayer
     public List listarSucursal(){
         String sql = "SELECT id_sucursales, nombre FROM sucursales";
         List<sucursales> lista = new ArrayList<>();
