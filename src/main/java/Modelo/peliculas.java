@@ -47,7 +47,7 @@ public class peliculas {
     }
 
     public void setGenero(String genero) {
-        genero = genero;
+        this.genero = genero; // Cambio de 'genero = genero;' a 'this.genero = genero;'
     }
 
     public String getDuracion() {
@@ -71,7 +71,7 @@ public class peliculas {
     }
 
     public void setEstado(String estado) {
-        this.estado = estado;
+        this.estado = estado; // Asegúrate de que el campo de la clase se esté utilizando
     }
     private Integer id;
     private String nombrePelicula;
