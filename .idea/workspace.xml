@@ -9,50 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54373b66-a928-4d92-95d8-dad7b62d1e50" name="Changes" comment="Prueba Carlos">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/principalControlador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/principal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Cine.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/chicago-333599_1920.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/city-1775878_1920.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/marquee-102673_1920.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/theater-603076_1920.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/principal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/principal.jsp" afterDir="false" />
+    <list default="true" id="54373b66-a928-4d92-95d8-dad7b62d1e50" name="Changes" comment="Se agrego la pagina principal ademas se le agrego funcionalidad al boton de calcular fecha">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/GeneraSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controlador/GeneraSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/multimedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Modelo/multimedia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModeloDAO/PeliculasDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModeloDAO/PeliculasDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModeloDAO/multimediaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModeloDAO/multimediaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/multimedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/multimedia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/multimedia.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/multimedia.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/peliculas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/peliculas.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/salas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/salas.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sucursales.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sucursales.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/usuario.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/usuario.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/multimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/multimedia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/peliculas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/peliculas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/multimediaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/multimediaDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/salasDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/salasDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/classpath.index" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/classpath.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/css/estilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/css/estilo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/usuario.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/multimedia.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/multimedia.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/salas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/salas.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/sucursales.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/sucursales.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/usuario.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/usuario.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/multimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/multimedia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/peliculas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/peliculas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ModeloDAO/multimediaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModeloDAO/multimediaDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ModeloDAO/salasDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModeloDAO/salasDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/classpath.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/GeneraSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/GeneraSession.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/multimedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/multimedia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controlador/GeneraSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controlador/GeneraSession.class" afterDir="false" />
     </list>
-    <list id="e95f95d3-8ae9-4303-8c1d-cd7687e73da7" name="Changes by Carlos" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/estilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/estilo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/multimedia.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/multimedia.jsp" afterDir="false" />
-    </list>
+    <list id="e95f95d3-8ae9-4303-8c1d-cd7687e73da7" name="Changes by Carlos" comment="Changes by Carlos" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,21 +33,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/webapp/multimedia.jsp">
-      <ranges>
-        <range start1="9" end1="9" start2="9" end2="18" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-        <range start1="18" end1="18" start2="27" end2="28" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-        <range start1="21" end1="21" start2="31" end2="62" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-        <range start1="27" end1="28" start2="68" end2="69" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-        <range start1="31" end1="32" start2="72" end2="72" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-        <range start1="35" end1="35" start2="75" end2="79" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-        <range start1="101" end1="102" start2="145" end2="146" changelist="e95f95d3-8ae9-4303-8c1d-cd7687e73da7" />
-        <range start1="105" end1="106" start2="149" end2="151" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-        <range start1="123" end1="123" start2="168" end2="169" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-      </ranges>
-    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -251,7 +199,7 @@
       <workItem from="1699400804691" duration="290000" />
       <workItem from="1699401126086" duration="749000" />
       <workItem from="1699422396979" duration="1067000" />
-      <workItem from="1699499151841" duration="12599000" />
+      <workItem from="1699499151841" duration="14063000" />
     </task>
     <task id="LOCAL-00001" summary="Se creó el proyecto">
       <option name="closed" value="true" />
@@ -269,7 +217,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699422537484</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Se agrego la pagina principal ademas se le agrego funcionalidad al boton de calcular fecha">
+      <option name="closed" value="true" />
+      <created>1699512667235</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699512667235</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Changes by Carlos">
+      <option name="closed" value="true" />
+      <created>1699512682727</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699512682727</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +253,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se creó el proyecto" />
     <MESSAGE value="Prueba Carlos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prueba Carlos" />
+    <MESSAGE value="Se agrego la pagina principal ademas se le agrego funcionalidad al boton de calcular fecha" />
+    <MESSAGE value="Changes by Carlos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by Carlos" />
   </component>
 </project>
