@@ -143,7 +143,7 @@
                 <tr>
                     <td>${ve.nombrePelicula}</td>
                     <td>${ve.fechaEmision}</td>
-                    <td>${ve.horaInicio};${ve.horaFinal}</td>
+                    <td>${ve.horaInicio}-${ve.horaFinal}</td>
                     <td>${ve.numeroSala}</td>
                     <td>${ve.nombreFormato}</td>
                     <td>
