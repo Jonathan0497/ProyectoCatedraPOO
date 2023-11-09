@@ -98,7 +98,6 @@
             <img src="img/chicago-333599_1920.jpg" class="d-block w-100" alt="Ping Pong 4">
             <div class="carousel-caption d-none d-md-block">
                 <h5>PrimeCinema</h5>
-                <p>Peliculas bla bla bla.</p>
             </div>
         </div>
 
