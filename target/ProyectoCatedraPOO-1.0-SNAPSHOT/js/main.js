@@ -96,6 +96,38 @@ function eliminarVenta(idSucursal) {
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    const SucursalForm = document.getElementById("SucursalForm");
+
+    SucursalForm.addEventListener('input', function(event) {
+        var target = event.target;
+        switch (target.id) {
+            case 'nombreSucursal':
+                validarNombreSucursal(target);
+                break;
+            case 'telefonoSucursal':
+                validarTelefonoSucursal(target);
+                break;
+            case 'direccionSucursal':
+                validarDireccionSucursal(target);
+                break;
+        }
+    })
+
+    function validarNombreSucursal(input) {
+        var regex = /^[a-zA-Z0-9-]+$/;
+        input.style.borderColor = regex.test(input.value) ? 'green' : 'red';
+    }
+    function validarTelefonoSucursal(input) {
+        // Expresión regular para un número de teléfono de El Salvador con formato XXX-XXXX
+        var regexTelefono = /^\d{4}-\d{4}$/;
+        input.style.borderColor = regexTelefono.test(input.value) ? 'green' : 'red';
+    }
+    function validarDireccionSucursal(input) {
+        // Expresión regular para un número de teléfono de El Salvador con formato XXX-XXXX
+        var regexDireccion = /^[a-zA-Z0-9-]{1,100}$/;
+        input.style.borderColor = regexDireccion.test(input.value) ? 'green' : 'red';
+    }
+
     document.getElementById("btnBuscar").addEventListener("click", function(e) {
         e.preventDefault();
         var buscarVenta = document.getElementById("buscarSucursal").value;
@@ -119,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         '<td><a class="btn btn-primary" onclick="datos(\'' + venta.id + '\',\'' + venta.fechaVenta + '\', \'' + venta.descripcion + '\', \'' + venta.lineaVenta + '\')">Editar</a></td>' +
                         '<td><a class="btn btn-danger" name="accion" value="eliminar" onclick="eliminarVenta(' + venta.id + ')">Eliminar</a></td>' +
                         '</tr>';
-                    document.getElementById("tablaVentas").innerHTML += row;
+                    document.getElementById("tablaSucursal").innerHTML += row;
                 });
             } else if (xhr.readyState === 4) {
                 console.log("Error: " + xhr.status);

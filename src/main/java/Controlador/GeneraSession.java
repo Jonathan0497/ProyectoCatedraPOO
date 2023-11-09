@@ -48,7 +48,7 @@ public class GeneraSession extends HttpServlet {
                     sessionActual.setAttribute("USER", usuario);
                     sessionActual.setAttribute("NAME", rs.getString(1));
                     sessionActual.setAttribute("ID", rs.getInt(2));
-                    response.sendRedirect("sucursalesControlador?accion=listar");
+                    response.sendRedirect("principalControlador?accion=listar");
                 } else {
                     response.sendRedirect("index.jsp");
                 }

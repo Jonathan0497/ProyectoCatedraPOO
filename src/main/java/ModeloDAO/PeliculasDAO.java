@@ -1,6 +1,7 @@
 package ModeloDAO;
 
 import Config.Conexion;
+import Modelo.multimedia;
 import Modelo.peliculas;
 import Modelo.Genero;
 import Modelo.EstadoPelicula;

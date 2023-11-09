@@ -181,4 +181,75 @@ document.addEventListener('DOMContentLoaded', function() {
         var regexClave = /^[^'";]+$/;
         input.style.borderColor = regexClave.test(input.value) ? 'green' : 'red';
     }
+
+    document.getElementById("btnBuscar").addEventListener("click", function(e) {
+        e.preventDefault();
+        var buscarVenta = document.getElementById("buscarUsuario").value;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/usuarioControlador?accion=buscar&buscarUsuario=" + buscarVenta, true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var usuarioList = JSON.parse(xhr.responseText);
+
+                // Clear the previous content
+                document.getElementById("tablaUsuario").innerHTML = "";
+
+                // Populate the table with the new data
+                usuarioList.forEach(function(usu) {
+                    var row = '<tr>' +
+                        '<td>' + usu.nombreUsuario + ' ' + usu.apellidoUsuario + '</td>' +
+                        '<td>' + usu.correoUsuario + '</td>' +
+                        '<td>' + usu.duiUsuario + '</td>' +
+                        '<td>' + usu.telefonoUsuario + '</td>' +
+                        '<td>' + usu.nombreEstado + '</td>' +
+                        '<td>' + usu.nombreTipo + '</td>' +
+                        '<td><a class="btn btn-primary" onclick="datos(\'' + usu.id + '\'\'' + usu.nombreUsuario + '\',\'' + usu.apellidoUsuario + '\', \'' + usu.correoUsuario + '\', \'' + usu.duiUsuario + '\', \'' + usu.telefonoUsuario + '\', \'' + usu.idEstado + '\', \'' + usu.idTipo + '\')">Editar</a></td>' +
+                        '<td><a class="btn btn-danger" name="accion" value="eliminar" onclick="eliminarUsuario(' + usu.id + ')">Eliminar</a></td>' +
+                        '</tr>';
+                    document.getElementById("tablaUsuario").innerHTML += row;
+                });
+            } else if (xhr.readyState === 4) {
+                console.log("Error: " + xhr.status);
+                alert("An error occurred while searching for sales. Please try again.");
+            }
+        };
+        xhr.send();
+    });
+
+    document.getElementById("buscarUsuario").addEventListener("keyup", function(e) {
+        var buscarVenta = this.value;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/usuarioControlador?accion=buscar&buscarUsuario=" + buscarVenta, true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var usuarioList = JSON.parse(xhr.responseText);
+
+                // Clear the previous content
+                document.getElementById("tablaUsuario").innerHTML = "";
+
+                // Populate the table with the new data
+                usuarioList.forEach(function(usu) {
+                    var row = '<tr>' +
+                        '<td>' + usu.nombreUsuario + ' ' + usu.apellidoUsuario + '</td>' +
+                        '<td>' + usu.correoUsuario + '</td>' +
+                        '<td>' + usu.duiUsuario + '</td>' +
+                        '<td>' + usu.telefonoUsuario + '</td>' +
+                        '<td>' + usu.nombreEstado + '</td>' +
+                        '<td>' + usu.nombreTipo + '</td>' +
+                        '<td><a class="btn btn-primary" onclick="datos(\'' + usu.id + '\'\'' + usu.nombreUsuario + '\',\'' + usu.apellidoUsuario + '\', \'' + usu.correoUsuario + '\', \'' + usu.duiUsuario + '\', \'' + usu.telefonoUsuario + '\', \'' + usu.idEstado + '\', \'' + usu.idTipo + '\')">Editar</a></td>' +
+                        '<td><a class="btn btn-danger" name="accion" value="eliminar" onclick="eliminarUsuario(' + usu.id + ')">Eliminar</a></td>' +
+                        '</tr>';
+                    document.getElementById("tablaUsuario").innerHTML += row;
+                });
+            } else if (xhr.readyState === 4) {
+                console.log("Error: " + xhr.status);
+                alert("An error occurred while searching for sales. Please try again.");
+            }
+        };
+        xhr.send();
+    });
 });

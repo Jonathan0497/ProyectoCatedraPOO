@@ -103,6 +103,33 @@ public class multimedia {
     private String nombreFormato;
     private String duracionPelicula;
     private Date fechaEmision;
+    private Integer idSucursal;
+    private String nombreSucursal;
+    private String descripcionPelicula;
+
+    public Integer getIdSucursal() {
+        return idSucursal;
+    }
+
+    public void setIdSucursal(Integer idSucursal) {
+        this.idSucursal = idSucursal;
+    }
+
+    public String getDescripcionPelicula() {
+        return descripcionPelicula;
+    }
+
+    public void setDescripcionPelicula(String descripcionPelicula) {
+        this.descripcionPelicula = descripcionPelicula;
+    }
+
+    public String getNombreSucursal() {
+        return nombreSucursal;
+    }
+
+    public void setNombreSucursal(String nombreSucursal) {
+        this.nombreSucursal = nombreSucursal;
+    }
 
     public Date getFechaEmision() {
         return fechaEmision;

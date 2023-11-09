@@ -104,3 +104,30 @@ function eliminarMultimedia(idMultimedia) {
         }
     });
 }
+
+document.getElementById("calcularFecha").addEventListener("click", function() {
+    event.preventDefault()
+    // Obtener la hora de inicio y la película seleccionada
+    var horaInicio = document.getElementById("horaInicio").value;
+    var peliculaSeleccionada = document.getElementById("idPelicula").value;
+
+    // Obtener la duración de la película seleccionada a partir del input oculto correspondiente
+    var duracionPelicula = document.getElementById(peliculaSeleccionada).value;
+
+    // Calcular la hora de finalización si la hora de inicio y la duración están disponibles
+    if (horaInicio && duracionPelicula) {
+        var inicio = moment(horaInicio, "HH:mm");
+        var duracion = moment.duration(parseInt(duracionPelicula), 'minutes');
+        var fin = inicio.add(duracion);
+
+        // Formatear la hora de finalización al formato deseado y establecer el valor del input correspondiente
+        document.getElementById("horaFin").value = fin.format("HH:mm");
+    } else {
+        // Mostrar un mensaje de error si falta alguna información
+        alert("Por favor, asegúrate de haber seleccionado una película y de haber ingresado una hora de inicio.");
+    }
+});
+
+// No olvides incluir la biblioteca de Moment.js para facilitar el manejo de fechas y horas
+// Puedes incluirla en tu HTML con la siguiente etiqueta script:
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>

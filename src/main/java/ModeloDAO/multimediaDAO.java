@@ -30,7 +30,7 @@ public class multimediaDAO {
     int re = 0;
 
     public List listar() {
-        String sql = "SELECT multimedia.id_multimedia, multimedia.horaInicio, multimedia.horaFin, salas.id_salas, CONCAT(salas.numero_sala, '; ', sucursales.nombre) AS sala_sucursal, peliculas.id_pelicula, peliculas.nombre_pelicula, formato.id_formato, formato.formato, multimedia.Fecha_emision\n" +
+        String sql = "SELECT multimedia.id_multimedia, multimedia.horaInicio, multimedia.horaFin, salas.id_salas, CONCAT(salas.numero_sala, ': ', sucursales.nombre) AS sala_sucursal, peliculas.id_pelicula, peliculas.nombre_pelicula, formato.id_formato, formato.formato, multimedia.Fecha_emision\n" +
                 "FROM multimedia\n" +
                 "INNER JOIN salas ON multimedia.id_salas = salas.id_salas\n" +
                 "INNER JOIN sucursales ON salas.id_sucursales = sucursales.id_sucursales\n" +
@@ -85,7 +85,7 @@ public class multimediaDAO {
     }
 
     public List listarSalas() {
-        String sql = "SELECT id_salas, CONCAT(salas.numero_sala, '; ', sucursales.nombre) AS sala_sucursal FROM salas\n" +
+        String sql = "SELECT id_salas, CONCAT(salas.numero_sala, ': ', sucursales.nombre) AS sala_sucursal FROM salas\n" +
                 "INNER JOIN sucursales ON salas.id_sucursales = sucursales.id_sucursales";
         List<multimedia> lista = new ArrayList<>();
 
@@ -128,6 +128,108 @@ public class multimediaDAO {
         return lista;
     }
 
+    public List listarSucursal() {
+        String sql = "SELECT id_sucursales, nombre FROM sucursales";
+        List<multimedia> lista = new ArrayList<>();
+
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                multimedia multimedia = new multimedia();
+                multimedia.setIdSucursal(rs.getInt("id_sucursales"));
+                multimedia.setNombreSucursal(rs.getString("nombre"));
+                lista.add(multimedia);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return lista;
+    }
+
+    public List<multimedia> buscarPrincipal(Integer nombre, Integer sucursal) { // `sucursal` ahora es un objeto `Integer` para permitir nulos
+        List<multimedia> lista = new ArrayList<>();
+        String sql = "";
+        if (nombre != null && sucursal != null) {
+            sql = "SELECT p.nombre_pelicula, s.numero_sala, su.nombre as nombreSucursal, m.horaInicio, p.duracion, p.descripcion, m.Fecha_emision\n"
+                    + "FROM multimedia m\n"
+                    + "INNER JOIN peliculas p ON m.id_pelicula = p.id_pelicula\n"
+                    + "INNER JOIN salas s ON m.id_salas = s.id_salas\n"
+                    + "INNER JOIN sucursales su ON s.id_sucursales = su.id_sucursales\n"
+                    + "WHERE p.id_pelicula = ? AND su.id_sucursales = ?;";
+        } else if (nombre != null) {
+            sql = "SELECT p.nombre_pelicula, s.numero_sala, su.nombre as nombreSucursal, m.horaInicio, p.duracion, p.descripcion, m.Fecha_emision\n"
+                    + "FROM multimedia m "
+                    + "INNER JOIN peliculas p ON m.id_pelicula = p.id_pelicula\n"
+                    + "INNER JOIN salas s ON m.id_salas = s.id_salas\n"
+                    + "INNER JOIN sucursales su ON s.id_sucursales = su.id_sucursales\n"
+                    + "WHERE p.id_pelicula = ?;";
+        } else if (sucursal != null) {
+            sql = "SELECT p.nombre_pelicula, s.numero_sala, su.nombre as nombreSucursal, m.horaInicio, p.duracion, p.descripcion, m.Fecha_emision\n"
+                    + "FROM multimedia m\n"
+                    + "INNER JOIN peliculas p ON m.id_pelicula = p.id_pelicula\n"
+                    + "INNER JOIN salas s ON m.id_salas = s.id_salas\n"
+                    + "INNER JOIN sucursales su ON s.id_sucursales = su.id_sucursales\n"
+                    + "WHERE su.id_sucursales = ?;";
+        }
+
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            if (nombre != null) ps.setInt(1, nombre);
+            if (sucursal != null) ps.setInt(nombre != null ? 2 : 1, sucursal);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                multimedia multi = new multimedia();
+                multi.setNombrePelicula(rs.getString("nombre_pelicula"));
+                multi.setNumeroSala(rs.getString("numero_sala"));
+                multi.setNombreSucursal(rs.getString("nombreSucursal"));
+                multi.setHoraInicio(rs.getString("horaInicio"));
+                multi.setDuracionPelicula(rs.getString("duracion"));
+                multi.setDescripcionPelicula(rs.getString("descripcion"));
+                multi.setFechaEmision(rs.getDate("Fecha_emision"));
+                lista.add(multi);
+            }
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error al buscar multimedia", e);
+        }
+        return lista;
+    }
+
+
+    public List<multimedia> ListarPrincipal() {
+        List<multimedia> lista = new ArrayList<>();
+        String sql = "SELECT p.nombre_pelicula, s.numero_sala, su.nombre as nombreSucursal, m.horaInicio, p.duracion, p.descripcion, m.Fecha_emision\n" +
+                "FROM multimedia m\n" +
+                "INNER JOIN peliculas p ON m.id_pelicula = p.id_pelicula\n" +
+                "INNER JOIN salas s ON m.id_salas = s.id_salas\n" +
+                "INNER JOIN sucursales su ON s.id_sucursales = su.id_sucursales;";
+
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                multimedia multi = new multimedia();
+                multi.setNombrePelicula(rs.getString("nombre_pelicula"));
+                multi.setNumeroSala(rs.getString("numero_sala"));
+                multi.setNombreSucursal(rs.getString("nombreSucursal"));
+                multi.setHoraInicio(rs.getString("horaInicio"));
+                multi.setDuracionPelicula(rs.getString("duracion"));
+                multi.setDescripcionPelicula(rs.getString("descripcion"));
+                multi.setFechaEmision(rs.getDate("Fecha_emision"));
+                lista.add(multi);
+            }
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "Error al listar las multimedia", e);
+        }
+        return lista;
+    }
     public List buscar(String nombre) {
         String sql = "SELECT multimedia.id_multimedia, multimedia.horaInicio, multimedia.horaFin, salas.id_salas, CONCAT(salas.numero_sala, '; ', sucursales.nombre) AS sala_sucursal, peliculas.id_pelicula, peliculas.nombre_pelicula, formato.id_formato, formato.formato, multimedia.Fecha_emision\n" +
                 "FROM multimedia\n" +
