@@ -63,7 +63,7 @@
 <br>
 <h1 class="text-center">Salas</h1>
 <div class="container">
-    <form method="post">
+    <form method="post" id="SalasForm">
         <input type="hidden" class="form-control" id="idSala" name="idSala">
         <div class="mb-3">
             <label for="numeroSala" class="form-label">Numero Sala</label>

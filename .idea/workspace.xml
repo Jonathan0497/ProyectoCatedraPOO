@@ -9,11 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54373b66-a928-4d92-95d8-dad7b62d1e50" name="Changes" comment="Se agrego la pagina principal ademas se le agrego funcionalidad al boton de calcular fecha">
+    <list default="true" id="54373b66-a928-4d92-95d8-dad7b62d1e50" name="Changes" comment="Se agrego la BD al proyecto">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/RegistrarPersona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4/storage_v2/_src_/schema/primecinema.MIp0hQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4/storage_v2/_src_/schema/primecinema.MIp0hQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/GeneraSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/GeneraSession.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/multimedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/multimedia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controlador/GeneraSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controlador/GeneraSession.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/usuarioControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controlador/usuarioControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ModeloDAO/usuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModeloDAO/usuarioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/peliculas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/peliculas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/salas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/salas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/peliculas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/peliculas.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/principal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/principal.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/salas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/salas.jsp" afterDir="false" />
     </list>
     <list id="e95f95d3-8ae9-4303-8c1d-cd7687e73da7" name="Changes by Carlos" comment="Changes by Carlos" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,30 +68,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/jonat/OneDrive - Universidad Don Bosco/Escritorio/ProyectoCatedraPOO",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jonat/OneDrive - Universidad Don Bosco/Escritorio/ProyectoCatedraPOO&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Controlador" />
@@ -200,6 +211,11 @@
       <workItem from="1699401126086" duration="749000" />
       <workItem from="1699422396979" duration="1067000" />
       <workItem from="1699499151841" duration="14063000" />
+      <workItem from="1699538419041" duration="171000" />
+      <workItem from="1699574333501" duration="325000" />
+      <workItem from="1699578631011" duration="1575000" />
+      <workItem from="1699924714941" duration="3009000" />
+      <workItem from="1699943430343" duration="3517000" />
     </task>
     <task id="LOCAL-00001" summary="Se creó el proyecto">
       <option name="closed" value="true" />
@@ -233,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699512682727</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Se agrego la BD al proyecto">
+      <option name="closed" value="true" />
+      <created>1699538581007</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699538581007</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +279,7 @@
     <MESSAGE value="Prueba Carlos" />
     <MESSAGE value="Se agrego la pagina principal ademas se le agrego funcionalidad al boton de calcular fecha" />
     <MESSAGE value="Changes by Carlos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by Carlos" />
+    <MESSAGE value="Se agrego la BD al proyecto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrego la BD al proyecto" />
   </component>
 </project>

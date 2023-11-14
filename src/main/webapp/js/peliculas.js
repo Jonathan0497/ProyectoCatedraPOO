@@ -186,4 +186,45 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         xhr.send();
     });
+
+    const PeliculasForm = document.getElementById("PeliculasForm");
+
+    PeliculasForm.addEventListener('input', function(event) {
+        var target = event.target;
+        switch (target.id) {
+            case 'nombrePelicula':
+                validarNombre(target);
+                break;
+            case 'anioLanzamiento':
+                validarAnioLanzamiento(target);
+                break;
+            case 'duracion':
+                validarDuracion(target);
+                break;
+            case 'descripcion':
+                validarDireccionSucursal(target);
+                break;
+        }
+    })
+
+    function validarNombre(input) {
+        var regex = /^[a-zA-Z0-9- ]+$/;
+        input.style.borderColor = regex.test(input.value) ? 'green' : 'red';
+    }
+
+    function validarDuracion(input) {
+        var regex = /^\d{1,3}$/;
+        input.style.borderColor = regex.test(input.value) ? 'green' : 'red';
+    }
+
+    function validarAnioLanzamiento(input) {
+        var regex = /^\d{4}$/;
+        input.style.borderColor = regex.test(input.value) ? 'green' : 'red';
+    }
+
+    function validarDireccionSucursal(input) {
+        // Expresión regular para un número de teléfono de El Salvador con formato XXX-XXXX
+        var regexDireccion = /^[a-zA-Z0-9- ]{1,100}$/;
+        input.style.borderColor = regexDireccion.test(input.value) ? 'green' : 'red';
+    }
 });

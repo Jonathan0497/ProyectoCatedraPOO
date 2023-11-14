@@ -57,7 +57,7 @@
 <br>
 <h1 class="text-center">Gestión de Películas</h1>
 <div class="container">
-    <form method="post">
+    <form method="post" id="PeliculasForm">
         <input type="hidden" class="form-control" id="idPelicula" name="idPelicula">
         <div class="row">
             <div class="col-md-12">
@@ -70,7 +70,7 @@
             </div>
             <div class="col-md-6">
                 <label for="duracion" class="form-label">Duración</label>
-                <input type="text" class="form-control" id="duracion" name="duracion" required>
+                <input type="text" class="form-control" id="duracion" name="duracion" placeholder="Minutos" required>
             </div>
             <div class="col-md-6">
                 <label for="idGenero" class="form-label">Género</label>

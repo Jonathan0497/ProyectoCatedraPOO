@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     function validarNombreSucursal(input) {
-        var regex = /^[a-zA-Z0-9-]+$/;
+        var regex = /^[a-zA-Z0-9- ]+$/;
         input.style.borderColor = regex.test(input.value) ? 'green' : 'red';
     }
     function validarTelefonoSucursal(input) {
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     function validarDireccionSucursal(input) {
         // Expresión regular para un número de teléfono de El Salvador con formato XXX-XXXX
-        var regexDireccion = /^[a-zA-Z0-9-]{1,100}$/;
+        var regexDireccion = /^[a-zA-Z0-9- ]{1,100}$/;
         input.style.borderColor = regexDireccion.test(input.value) ? 'green' : 'red';
     }
 

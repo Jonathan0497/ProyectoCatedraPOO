@@ -155,4 +155,19 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         xhr.send();
     });
+
+    const SalasForm = document.getElementById("SalasForm");
+    SalasForm.addEventListener('input', function(event) {
+        var target = event.target;
+        switch (target.id) {
+            case 'numeroSala':
+                validarNumeroSala(target);
+            break;
+        }
+    })
+
+    function validarNumeroSala(input) {
+        var regex = /^\d{1,2}$/;
+        input.style.borderColor = regex.test(input.value) ? 'green' : 'red';
+    }
 });

@@ -60,6 +60,7 @@
             </ul>
         </div>
         <a class="navbar-brand" href="usuarioControlador?accion=listar"><i class="fas fa-user"></i> Usuario</a>
+        <a class="navbar-brand" href="GeneraSession?operacion=salir"><i class="fas fa-user"></i> Cerrar Sesion</a>
     </div>
 </nav>
 
