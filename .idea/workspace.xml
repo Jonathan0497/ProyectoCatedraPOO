@@ -10,21 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54373b66-a928-4d92-95d8-dad7b62d1e50" name="Changes" comment="Se agrego la BD al proyecto">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/RegistrarPersona.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4/storage_v2/_src_/schema/primecinema.MIp0hQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4/storage_v2/_src_/schema/primecinema.MIp0hQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/usuarioControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controlador/usuarioControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModeloDAO/usuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModeloDAO/usuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/peliculas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/peliculas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/salas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/salas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/peliculas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/peliculas.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/principal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/principal.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/salas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/salas.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/RegistrarPersona.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/peliculasControlador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/principalControlador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/EstadoPelicula.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/Genero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/PeliculasDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/css/principal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/img/Cine.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/img/chicago-333599_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/img/city-1775878_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/img/marquee-102673_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/img/theater-603076_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/peliculas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/principal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/peliculas.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/principal.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controlador/RegistrarPersona.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controlador/peliculasControlador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controlador/principalControlador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/EstadoPelicula.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/Genero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ModeloDAO/PeliculasDAO.class" beforeDir="false" />
     </list>
     <list id="e95f95d3-8ae9-4303-8c1d-cd7687e73da7" name="Changes by Carlos" comment="Changes by Carlos" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +54,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/asientos-ticket" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -63,7 +79,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2XY30LBtD1wIrHj5j2u6bYHu9tY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
