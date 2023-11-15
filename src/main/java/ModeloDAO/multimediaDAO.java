@@ -55,7 +55,6 @@ public class multimediaDAO {
                 multi.setIdFormato(rs.getInt("id_formato"));
                 multi.setNombreFormato(rs.getString("formato"));
                 multi.setFechaEmision(rs.getDate("Fecha_emision"));
-                System.out.println(multi.getId());
                 lista.add(multi);
             }
         } catch (SQLException e) {
