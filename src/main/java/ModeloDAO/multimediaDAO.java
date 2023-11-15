@@ -55,6 +55,7 @@ public class multimediaDAO {
                 multi.setIdFormato(rs.getInt("id_formato"));
                 multi.setNombreFormato(rs.getString("formato"));
                 multi.setFechaEmision(rs.getDate("Fecha_emision"));
+                System.out.println(multi.getId());
                 lista.add(multi);
             }
         } catch (SQLException e) {
@@ -203,7 +204,7 @@ public class multimediaDAO {
 
     public List<multimedia> ListarPrincipal() {
         List<multimedia> lista = new ArrayList<>();
-        String sql = "SELECT p.nombre_pelicula, s.numero_sala, su.nombre as nombreSucursal, m.horaInicio, p.duracion, p.descripcion, m.Fecha_emision\n" +
+        String sql = "SELECT m.id_multimedia,p.nombre_pelicula, s.id_salas, s.numero_sala, su.nombre as nombreSucursal, m.horaInicio, p.duracion, p.descripcion, m.Fecha_emision\n" +
                 "FROM multimedia m\n" +
                 "INNER JOIN peliculas p ON m.id_pelicula = p.id_pelicula\n" +
                 "INNER JOIN salas s ON m.id_salas = s.id_salas\n" +
@@ -216,8 +217,10 @@ public class multimediaDAO {
 
             while (rs.next()) {
                 multimedia multi = new multimedia();
+                multi.setId(rs.getInt("id_multimedia"));
                 multi.setNombrePelicula(rs.getString("nombre_pelicula"));
                 multi.setNumeroSala(rs.getString("numero_sala"));
+                multi.setIdSala(rs.getInt("id_salas"));
                 multi.setNombreSucursal(rs.getString("nombreSucursal"));
                 multi.setHoraInicio(rs.getString("horaInicio"));
                 multi.setDuracionPelicula(rs.getString("duracion"));

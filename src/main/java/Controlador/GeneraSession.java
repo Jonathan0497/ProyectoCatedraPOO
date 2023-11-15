@@ -1,6 +1,7 @@
 package Controlador;
 
 import Config.Conexion;
+import Modelo.Reserva;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -49,6 +50,9 @@ public class GeneraSession extends HttpServlet {
                     sessionActual.setAttribute("NAME", rs.getString(1));
                     sessionActual.setAttribute("ID", rs.getInt(2));
                     response.sendRedirect("principalControlador?accion=listar");
+
+                    // SETEANDO ID de usuario en la reserva
+                    Reserva.setIdUsuario(rs.getInt(2));
                 } else {
                     response.sendRedirect("index.jsp");
                 }

@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `asientos` (
   `id_salas` int NOT NULL,
   PRIMARY KEY (`id_asiento`),
   KEY `id_salas` (`id_salas`)
-) ENGINE=InnoDB AUTO_INCREMENT=282 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Volcado de datos para la tabla `asientos`
@@ -254,7 +254,7 @@ CREATE TABLE IF NOT EXISTS `clasificacion` (
   `id_clasificacion` int NOT NULL AUTO_INCREMENT,
   `clasificacion` varchar(25) NOT NULL,
   PRIMARY KEY (`id_clasificacion`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `clasificacion`
@@ -278,7 +278,7 @@ CREATE TABLE IF NOT EXISTS `edad_cliente` (
   `id_edadCliente` int NOT NULL AUTO_INCREMENT,
   `descripcion` varchar(50) NOT NULL,
   PRIMARY KEY (`id_edadCliente`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `edad_cliente`
@@ -299,7 +299,7 @@ CREATE TABLE IF NOT EXISTS `estado_pelicula` (
   `id_estadoPelicula` int NOT NULL AUTO_INCREMENT,
   `estadoPelicula` varchar(25) NOT NULL,
   PRIMARY KEY (`id_estadoPelicula`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `estado_pelicula`
@@ -321,7 +321,7 @@ CREATE TABLE IF NOT EXISTS `estado_usuario` (
   `id_estadoUsuario` int NOT NULL AUTO_INCREMENT,
   `estadoUsuario` varchar(50) NOT NULL,
   PRIMARY KEY (`id_estadoUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `estado_usuario`
@@ -349,7 +349,7 @@ CREATE TABLE IF NOT EXISTS `facturacion` (
   `total` decimal(8,2) DEFAULT NULL,
   PRIMARY KEY (`id_facturacion`),
   KEY `id_usuario` (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -367,7 +367,7 @@ CREATE TABLE IF NOT EXISTS `factura_ticket` (
   PRIMARY KEY (`id_factura_ticket`),
   KEY `id_facturacion` (`id_facturacion`),
   KEY `id_ticket` (`id_ticket`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -380,7 +380,7 @@ CREATE TABLE IF NOT EXISTS `formato` (
   `id_formato` int NOT NULL AUTO_INCREMENT,
   `formato` varchar(25) NOT NULL,
   PRIMARY KEY (`id_formato`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `formato`
@@ -401,7 +401,7 @@ CREATE TABLE IF NOT EXISTS `genero` (
   `id_genero` int NOT NULL AUTO_INCREMENT,
   `genero` varchar(25) NOT NULL,
   PRIMARY KEY (`id_genero`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `genero`
@@ -438,7 +438,7 @@ CREATE TABLE IF NOT EXISTS `multimedia` (
   KEY `id_salas` (`id_salas`),
   KEY `id_pelicula` (`id_pelicula`),
   KEY `id_formato` (`id_formato`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `multimedia`
@@ -468,7 +468,7 @@ CREATE TABLE IF NOT EXISTS `peliculas` (
   PRIMARY KEY (`id_pelicula`),
   KEY `id_genero` (`id_genero`),
   KEY `id_estadoPelicula` (`id_estadoPelicula`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `peliculas`
@@ -494,7 +494,7 @@ CREATE TABLE IF NOT EXISTS `precio` (
   PRIMARY KEY (`id_precio`),
   KEY `id_formato` (`id_formato`),
   KEY `id_edadCliente` (`id_edadCliente`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `precio`
@@ -519,7 +519,7 @@ CREATE TABLE IF NOT EXISTS `salas` (
   `id_sucursales` int NOT NULL,
   PRIMARY KEY (`id_salas`),
   KEY `id_sucursales` (`id_sucursales`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `salas`
@@ -546,7 +546,7 @@ CREATE TABLE IF NOT EXISTS `sucursales` (
   `id_usuario` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`id_sucursales`),
   KEY `id_usuario` (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `sucursales`
@@ -575,7 +575,7 @@ CREATE TABLE IF NOT EXISTS `ticket` (
   KEY `id_asiento` (`id_asiento`),
   KEY `id_usuario` (`id_usuario`),
   KEY `id_precio` (`id_precio`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -588,7 +588,7 @@ CREATE TABLE IF NOT EXISTS `tipo_usuario` (
   `id_tipoUsuario` int NOT NULL AUTO_INCREMENT,
   `tipoUsuario` varchar(50) NOT NULL,
   PRIMARY KEY (`id_tipoUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `tipo_usuario`
@@ -619,7 +619,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`id_usuario`),
   KEY `id_estadoUsuario` (`id_estadoUsuario`),
   KEY `id_tipoUsuario` (`id_tipoUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Volcado de datos para la tabla `usuario`
