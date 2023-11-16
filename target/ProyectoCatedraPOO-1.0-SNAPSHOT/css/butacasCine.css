@@ -1,13 +1,28 @@
+.contenedor-cine {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    /* height: 100vh; Opcional: para que tome toda la altura de la ventana */
+}
+
+/* Contenedor de Asientos */
 .cine-container {
     display: flex;
     flex-wrap: wrap;
+    max-width: 500px; /* Ajusta esto según tus necesidades */
+    margin: auto; /* Centra el contenedor de asientos */
 }
 
 .asiento {
     border: 2px solid #333;
     padding: 10px;
     margin: 5px;
-    text-align: center;
+    text-align: center; /* Asegura que el texto esté centrado */
+    display: flex; /* Establece el contenedor como un contenedor flex */
+    flex-direction: column; /* Apila los elementos en una columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    width: calc(20% - 10px); /* Esto hará que cada asiento ocupe el 20% del contenedor, menos los márgenes */
 }
 
 .numero {
