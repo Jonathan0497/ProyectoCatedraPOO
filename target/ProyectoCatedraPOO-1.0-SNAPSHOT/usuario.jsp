@@ -55,9 +55,12 @@
                     <a class="nav-link" href="multimediaControlador?accion=listar"><i
                             class="fas fa-photo-video"></i> Multimedia</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="usuarioControlador?accion=listar"><i class="fas fa-user"></i> Usuario</a>
+                </li>
             </ul>
         </div>
-        <a class="navbar-brand" href="usuarioControlador?accion=listar"><i class="fas fa-user"></i> Usuario</a>
+        <a class="navbar-brand" href="GeneraSession?operacion=salir"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesion</a>
     </div>
 </nav>
 <br>
@@ -124,8 +127,8 @@
 <!--Tabla-->
 <div>
     <div class="">
-        <table class="table table-striped table-hover table-dark">
-            <thead class="table-dark table-striped">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
             <tr>
                 <th>Nombre Completo</th>
                 <th>Correo</th>
@@ -164,29 +167,6 @@
         <div class="row mb-3">
             <div class="col-12">
                 <p class="text-uppercase fw-bold mb-0">©Proyecto de Cátedra - 2023</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <a class="text-white text-decoration-none" href="Contactanos.html">
-                            <i class="fas fa-envelope me-2"></i>CONTACTANOS
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="text-white text-decoration-none"
-                           href="https://github.com/Jonathan0497/DAW_06L_ProyectoCatedra">
-                            <i class="fab fa-github me-2"></i>GITHUB
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="text-white text-decoration-none"
-                           href="https://trello.com/b/czwVuYXC/proyecto-daw-catedra">
-                            <i class="fab fa-trello me-2"></i>TRELLO
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>

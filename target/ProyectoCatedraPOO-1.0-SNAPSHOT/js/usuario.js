@@ -12,10 +12,10 @@ function datos(id, nombreUsuario, apellidoUsuario, correoUsuario, duiUsuario, te
     clave.disabled = true;
 }
 const btnGuardar = document.getElementById("btnGuardar");
-
 btnGuardar.addEventListener("click", function (event) {
     event.preventDefault();
 
+    // Recopila los datos del formulario
     let idUsuario = document.getElementById("idUsuario").value;
     let nombreUsuario = document.getElementById("nombreUsuario").value;
     let apellidoUsuario = document.getElementById("apellidoUsuario").value;
@@ -25,52 +25,39 @@ btnGuardar.addEventListener("click", function (event) {
     let claveUsuario = document.getElementById("claveUsuario").value;
     let idEstado = document.getElementById("idEstado").value;
     let idTipo = document.getElementById("idTipo").value;
-    let mensaje;
 
-    // Determina si se está agregando o modificando un usuario
-    let accion = idUsuario ? "modificar" : "agregar";
-
-    if (accion === "modificar") {
-        mensaje = "Los datos se modificaron con éxito";
-    }
-
-    if (accion === "agregar") {
-        mensaje = "Los datos se agregaron con éxito";
-    }
-
-    // Configura la solicitud AJAX
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "/usuarioControlador", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function () {
-        if (this.readyState === 4) {
-            if (this.status === 200) {
-                Swal.fire({
-                    title: '¡Éxito!',
-                    text: mensaje,
-                    icon: 'success'
-                }).then((result) => {
-                    location.reload();  // Recarga la página después de cerrar el mensaje
-                });
-            } else {
-                Swal.fire({
-                    title: 'Error',
-                    text: 'Hubo un error al procesar la solicitud.',
-                    icon: 'error'
-                });
-            }
+    // Verifica si el DUI existe antes de realizar la acción de agregar/modificar
+    verificarDuiExistente(duiUsuario, idUsuario, function(duiExiste) {
+        if (duiExiste) {
+            Swal.fire({
+                title: 'Error',
+                text: 'El DUI ya está registrado para otro usuario.',
+                icon: 'error'
+            });
+        } else {
+            // Si el DUI no existe, proceder con la acción de agregar o modificar
+            enviarDatosUsuario(idUsuario, nombreUsuario, apellidoUsuario, correoUsuario, duiUsuario, telefonoUsuario, claveUsuario, idEstado, idTipo);
         }
-    };
-    xhr.onerror = function () {
-        Swal.fire({
-            title: 'Error',
-            text: 'Hubo un error al enviar la petición.',
-            icon: 'error'
-        });
-    };
+    });
+});
 
-    // Envía los datos al servidor
-    xhr.send("accion=" + encodeURIComponent(accion) +
+function verificarDuiExistente(dui, idUsuario, callback) {
+    // Reemplaza '/verificarDui' con la ruta correcta en tu servidor que realiza la verificación
+    fetch('/verificarDui?dui=' + encodeURIComponent(dui) + '&idUsuario=' + encodeURIComponent(idUsuario))
+        .then(response => response.json())
+        .then(data => {
+            callback(data.duiExiste); // asumiendo que 'data.duiExiste' es un booleano
+        })
+        .catch(error => {
+            console.error('Error al verificar el DUI:', error);
+            callback(false); // Continuar en caso de error al verificar
+        });
+}
+
+function enviarDatosUsuario(idUsuario, nombreUsuario, apellidoUsuario, correoUsuario, duiUsuario, telefonoUsuario, claveUsuario, idEstado, idTipo) {
+    let xhr = new XMLHttpRequest();
+    let accion = idUsuario ? 'modificar' : 'agregar';
+    let params = "accion=" + encodeURIComponent(accion) +
         "&idUsuario=" + encodeURIComponent(idUsuario) +
         "&nombreUsuario=" + encodeURIComponent(nombreUsuario) +
         "&apellidoUsuario=" + encodeURIComponent(apellidoUsuario) +
@@ -79,8 +66,40 @@ btnGuardar.addEventListener("click", function (event) {
         "&duiUsuario=" + encodeURIComponent(duiUsuario) +
         "&telefonoUsuario=" + encodeURIComponent(telefonoUsuario) +
         "&idEstado=" + encodeURIComponent(idEstado) +
-        "&idTipo=" + encodeURIComponent(idTipo));
-});
+        "&idTipo=" + encodeURIComponent(idTipo);
+
+    xhr.open("POST", "/usuarioControlador", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function () {
+        if (this.readyState === 4) {
+            if (this.status === 200) {
+                Swal.fire({
+                    title: '¡Éxito!',
+                    text: 'Los datos se han guardado correctamente.',
+                    icon: 'success'
+                }).then(() => {
+                    location.reload();
+                });
+            } else {
+                let errorMensaje = this.responseText || 'Hubo un error al procesar la solicitud.';
+                Swal.fire({
+                    title: 'Error',
+                    text: errorMensaje,
+                    icon: 'error'
+                });
+            }
+        }
+    };
+    xhr.onerror = function () {
+        Swal.fire({
+            title: 'Error de conexión',
+            text: 'No se pudo conectar al servidor.',
+            icon: 'error'
+        });
+    };
+    xhr.send(params);
+}
+
 
 // Supongo que este evento se dispara al hacer clic en un botón "Eliminar" para un usuario
 function eliminarUsuario(idUsuario) {

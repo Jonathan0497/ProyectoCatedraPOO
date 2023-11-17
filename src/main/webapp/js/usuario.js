@@ -52,10 +52,19 @@ btnGuardar.addEventListener("click", function (event) {
                 }).then((result) => {
                     location.reload();  // Recarga la página después de cerrar el mensaje
                 });
-            } else {
+            } else if (this.status === 409) {
+                // Manejo específico para DUI duplicado
                 Swal.fire({
                     title: 'Error',
-                    text: 'Hubo un error al procesar la solicitud.',
+                    text: this.responseText, // Usa el mensaje del servidor
+                    icon: 'error'
+                });
+            } else {
+                // Manejo de otros errores
+                let errorMensaje = this.responseText || 'Hubo un error al procesar la solicitud.';
+                Swal.fire({
+                    title: 'Error',
+                    text: errorMensaje,
                     icon: 'error'
                 });
             }

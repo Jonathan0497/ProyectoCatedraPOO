@@ -55,9 +55,12 @@
                     <a class="nav-link" href="multimediaControlador?accion=listar"><i
                             class="fas fa-photo-video"></i> Multimedia</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="usuarioControlador?accion=listar"><i class="fas fa-user"></i> Usuario</a>
+                </li>
             </ul>
         </div>
-        <a class="navbar-brand" href="usuarioControlador?accion=listar"><i class="fas fa-user"></i> Usuario</a>
+        <a class="navbar-brand" href="GeneraSession?operacion=salir"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesion</a>
     </div>
 </nav>
 <br>
@@ -126,8 +129,8 @@
 <!--Tabla-->
 <div>
     <div class="">
-        <table class="table table-striped table-hover table-dark">
-            <thead class="table-dark table-striped">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
             <tr>
                 <th>Pelicula</th>
                 <th>Fecha Emision</th>
@@ -159,6 +162,16 @@
         </table>
     </div>
 </div>
+
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12">
+                <p class="text-uppercase fw-bold mb-0">©Proyecto de Cátedra - 2023</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 <!--Boostrap Script-->

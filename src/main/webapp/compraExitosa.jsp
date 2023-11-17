@@ -18,7 +18,7 @@
 %>
 <html>
 <head>
-    <title>Compra exitosa</title>
+  <title>Compra exitosa</title>
   <link rel="stylesheet"  href="./css/compraExitosa.css">
 </head>
 <body>
@@ -27,6 +27,14 @@
   <h1>Compra Exitosa</h1>
   <p>¡Gracias por tu compra! Tu pedido ha sido procesado con éxito.</p>
   <p>Total: <strong>${totalPagado}</strong></p>
+  <input type="hidden" id="totalPagado" name="totalPagado" value="${totalPagado}">
+  <label for="clientePago" class="form-label">Ingrese la cantidad que pago el cliente</label>
+  <span>$</span>
+  <input type="text" id="clientePago" name="clientePago" style="border-radius: 1rem;">
+  <br><br>
+  <a id="calcularVuelto" class="btn">Cacular vuelto</a>
+  <p>Vuelto: <span id="vuelto"></span></p>
+
   <a href="principalControlador?accion=listar" class="btn">Volver a la Tienda</a>
 
 </div>
