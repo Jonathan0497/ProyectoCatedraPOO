@@ -145,6 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     var row = '<tr>' +
                         '<td>' + sala.numeroSala + '</td>' +
                         '<td>' + sala.Sucursal + '</td>' +
+                        '<td>' + sala.entradasVendidas + '</td>' +
                         '<td><a class="btn btn-primary" onclick="datos(\'' + sala.id + '\',\'' + sala.numeroSala + '\', \'' + sala.Sucursal + '\')">Editar</a></td>' +
                         '<td><a class="btn btn-danger" name="accion" value="eliminar" onclick="eliminarVenta(' + sala.id + ')">Eliminar</a></td>' +
                         '</tr>';

@@ -10,86 +10,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54373b66-a928-4d92-95d8-dad7b62d1e50" name="Changes" comment="Se elimino un comentario">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/compraExitosa.js" afterDir="false" />
+    <list default="true" id="54373b66-a928-4d92-95d8-dad7b62d1e50" name="Changes" comment="Se creo la logica de facturacion">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/JaspertReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/JaspertReport2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ReportePrimeCinema1.jasper" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ReportePrimeCinema2.jasper" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4/storage_v2/_src_/schema/primecinema.MIp0hQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4/storage_v2/_src_/schema/primecinema.MIp0hQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/asientos.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/asientos.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/compraExitosa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/compraExitosa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/usuario.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/multimedia.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/multimedia.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/peliculas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/peliculas.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/principal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/principal.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ModeloDAO/salasDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModeloDAO/salasDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/salas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/salas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/salas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/salas.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/sucursales.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sucursales.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/usuario.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/usuario.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Config/Conexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Config/Conexion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/AsientosControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/AsientosControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/GeneraSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/GeneraSession.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/RegistrarPersona.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/RegistrarPersona.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/multimediaControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/multimediaControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/peliculasControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/peliculasControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/salasControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/salasControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/sucursalesControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/sucursalesControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/usuarioControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Controlador/usuarioControlador.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/Asientos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/Asientos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/EstadoPelicula.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/EstadoPelicula.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/Genero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/Genero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/multimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/multimedia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/peliculas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/peliculas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/salas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/salas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/sucursales.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/sucursales.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/PeliculasDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/PeliculasDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/multimediaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/multimediaDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/asientosDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/asientosDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/salasDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/salasDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/sucursalesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/sucursalesDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/usuarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/usuarioDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/asientos.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/asientos.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/compraExitosa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/compraExitosa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/css/butacasCine.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/css/butacasCine.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/usuario.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/multimedia.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/multimedia.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/peliculas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/peliculas.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/principal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/principal.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/salas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/salas.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/sucursales.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/sucursales.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/usuario.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/usuario.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Config/Conexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config/Conexion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controlador/AsientosControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controlador/AsientosControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controlador/GeneraSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controlador/GeneraSession.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controlador/RegistrarPersona.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controlador/RegistrarPersona.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controlador/multimediaControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controlador/multimediaControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controlador/peliculasControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controlador/peliculasControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controlador/salasControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controlador/salasControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controlador/sucursalesControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controlador/sucursalesControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controlador/usuarioControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controlador/usuarioControlador.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Modelo/Asientos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/Asientos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/EstadoPelicula.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/EstadoPelicula.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/Genero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/Genero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/multimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/multimedia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/peliculas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/peliculas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/salas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/salas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/sucursales.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/sucursales.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ModeloDAO/PeliculasDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModeloDAO/PeliculasDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ModeloDAO/multimediaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModeloDAO/multimediaDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ModeloDAO/asientosDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModeloDAO/asientosDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ModeloDAO/salasDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModeloDAO/salasDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ModeloDAO/sucursalesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModeloDAO/sucursalesDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ModeloDAO/usuarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModeloDAO/usuarioDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/classpath.index" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classpath.index" afterDir="false" />
     </list>
     <list id="e95f95d3-8ae9-4303-8c1d-cd7687e73da7" name="Changes by Carlos" comment="Changes by Carlos" />
-    <list id="3d3977dc-8333-40ce-925b-83c31531188e" name="Changes by jonat" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/salas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Modelo/salas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModeloDAO/salasDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModeloDAO/salasDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/compraExitosa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/compraExitosa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/salas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/salas.jsp" afterDir="false" />
-    </list>
+    <list id="3d3977dc-8333-40ce-925b-83c31531188e" name="Changes by jonat" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,26 +61,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/webapp/compraExitosa.jsp">
-      <ranges>
-        <range start1="20" end1="21" start2="20" end2="21" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-        <range start1="29" end1="29" start2="29" end2="37" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-        <range start1="30" end1="30" start2="38" end2="39" changelist="3d3977dc-8333-40ce-925b-83c31531188e" />
-        <range start1="32" end1="32" start2="41" end2="42" changelist="3d3977dc-8333-40ce-925b-83c31531188e" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/webapp/salas.jsp">
-      <ranges>
-        <range start1="58" end1="58" start2="58" end2="61" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-        <range start1="60" end1="61" start2="63" end2="64" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-        <range start1="95" end1="97" start2="98" end2="100" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-        <range start1="100" end1="100" start2="103" end2="104" changelist="3d3977dc-8333-40ce-925b-83c31531188e" />
-        <range start1="109" end1="109" start2="113" end2="114" changelist="3d3977dc-8333-40ce-925b-83c31531188e" />
-        <range start1="129" end1="152" start2="134" end2="134" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
-      </ranges>
-    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -167,7 +96,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Carlos/Downloads/Avance_proyectoPOO-main/proyectocinema",
+    "last_opened_file_path": "C:/Users/jonat/OneDrive - Universidad Don Bosco/Escritorio/ProyectoCatedraPOO/src/main/webapp",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -185,6 +114,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Controlador" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jonat\OneDrive - Universidad Don Bosco\Escritorio\ProyectoCatedraPOO\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Controlador" />
@@ -367,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700082735812</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Se creo la logica de facturacion">
+      <option name="closed" value="true" />
+      <created>1700180327750</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700180327750</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,6 +332,7 @@
     <MESSAGE value="Se agrego la BD al proyecto" />
     <MESSAGE value="Se agrego el registrarse ademas se añadieron validaciones a algunos formularios" />
     <MESSAGE value="Se elimino un comentario" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se elimino un comentario" />
+    <MESSAGE value="Se creo la logica de facturacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se creo la logica de facturacion" />
   </component>
 </project>

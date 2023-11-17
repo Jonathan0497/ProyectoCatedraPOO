@@ -98,7 +98,12 @@ public class salasDAO {
                 "    LEFT JOIN ticket t ON a.id_asiento = t.id_asiento\n" +
                 "    INNER JOIN sucursales suc ON s.id_sucursales = suc.id_sucursales\n" +
                 "WHERE \n" +
-                "    suc.nombre LIKE ?;\n";
+                "    suc.nombre LIKE ?\n" +
+                "GROUP BY \n" +
+                "                    s.id_salas,\n" +
+                "                    s.numero_sala,\n" +
+                "                    suc.id_sucursales,\n" +
+                "                suc.nombre;";
 
         List<salas> lista = new ArrayList<>();
 

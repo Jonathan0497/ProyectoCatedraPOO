@@ -92,10 +92,19 @@
         </div>
     </form>
     <br>
-    <form class="d-flex col-md-4 ms-auto">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="buscarSucursal">
-        <button class="btn btn-outline-success" type="submit" id="btnBuscar">Search</button>
-    </form>
+
+    <div class="d-flex justify-content-between align-items-center my-3">
+        <!-- Botón de Reporte -->
+        <a href="JaspertReport2" class="btn btn-info">
+            <i class="bi bi-filetype-pdf"></i> Generar Reporte Salas
+        </a>
+
+        <!-- Barra de Búsqueda -->
+        <form class="d-flex col-md-4 ms-auto">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="buscarSucursal">
+            <button class="btn btn-outline-success" type="submit" id="btnBuscar">Search</button>
+        </form>
+    </div>
 </div>
 <br>
 
