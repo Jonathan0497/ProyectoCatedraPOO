@@ -66,11 +66,11 @@ public class multimediaControlador extends HttpServlet {
 
                     Gson gson = new Gson();
                     String multiJson = gson.toJson(multi);
-                    response.getWriter().write(multiJson);// Establece el código de estado en 200
+                    response.getWriter().write(multiJson);
                     response.setStatus(HttpServletResponse.SC_OK);
                 } else {
-                    // No es una petición AJAX, redirige como de costumbre
-                    response.sendRedirect("multimediaControlador?accion=listar");//Este es el error
+
+                    response.sendRedirect("multimediaControlador?accion=listar");
 
                     return;
                 }

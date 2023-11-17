@@ -26,7 +26,6 @@ public class peliculasControlador extends HttpServlet {
             case "listar":
                 List<peliculas> lista = peliDAO.listar();
                 request.setAttribute("lista", lista);
-                // Suponiendo que existan los métodos para listar géneros y estados
                 List listaGeneros = peliDAO.listarGeneros();
                 request.setAttribute("listaGeneros", listaGeneros);
                 List listaEstados = peliDAO.listarEstados();
@@ -119,7 +118,6 @@ public class peliculasControlador extends HttpServlet {
         }
     }
 
-    // Este método refleja si la petición es AJAX o no y responde en consecuencia
     private void sendResponseAsJsonOrRedirect(peliculas peli, String requestedWithHeader, HttpServletResponse response, String redirectUrl) throws IOException {
         if ("XMLHttpRequest".equals(requestedWithHeader)) {
             response.setContentType("application/json");

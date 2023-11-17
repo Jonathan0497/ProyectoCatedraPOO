@@ -37,9 +37,9 @@ btnGuardar.addEventListener("click", function (event) {
                 text: mensaje,
                 icon: 'success'
             }).then((result) => {
-                location.reload();  // Recarga la página después de cerrar el mensaje
+                location.reload();
             });
-        } else if (this.readyState === 4) {  // Si la petición termina pero el status no es 200
+        } else if (this.readyState === 4) {
             Swal.fire({
                 title: 'Error',
                 text: 'Hubo un error al procesar la solicitud.',
@@ -68,7 +68,6 @@ function eliminarVenta(idSucursal) {
         reverseButtons: true
     }).then((result) => {
         if (result.isConfirmed) {
-            // Si el usuario confirma, se realiza la petición AJAX para eliminar la venta.
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/sucursalesControlador', true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -79,7 +78,7 @@ function eliminarVenta(idSucursal) {
                         'La venta ha sido eliminada.',
                         'success'
                     ).then((result) => {
-                        location.reload();  // Recargar la página para reflejar la eliminación.
+                        location.reload();
                     });
                 } else {
                     Swal.fire(
@@ -118,12 +117,10 @@ document.addEventListener('DOMContentLoaded', function() {
         input.style.borderColor = regex.test(input.value) ? 'green' : 'red';
     }
     function validarTelefonoSucursal(input) {
-        // Expresión regular para un número de teléfono de El Salvador con formato XXX-XXXX
         var regexTelefono = /^\d{4}-\d{4}$/;
         input.style.borderColor = regexTelefono.test(input.value) ? 'green' : 'red';
     }
     function validarDireccionSucursal(input) {
-        // Expresión regular para un número de teléfono de El Salvador con formato XXX-XXXX
         var regexDireccion = /^[a-zA-Z0-9- ]{1,100}$/;
         input.style.borderColor = regexDireccion.test(input.value) ? 'green' : 'red';
     }
@@ -139,10 +136,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var ventaList = JSON.parse(xhr.responseText);
 
-                // Clear the previous content
                 document.getElementById("tablaSucursal").innerHTML = "";
 
-                // Populate the table with the new data
                 ventaList.forEach(function(venta) {
                     var row = '<tr>' +
                         '<td>' + venta.fechaVenta + '</td>' +
@@ -171,10 +166,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var ventaList = JSON.parse(xhr.responseText);
 
-                // Clear the previous content
                 document.getElementById("tablaSucursal").innerHTML = "";
 
-                // Populate the table with the new data
                 ventaList.forEach(function(sucursal) {
                     var row = '<tr>' +
                         '<td>' + sucursal.nombre + '</td>' +

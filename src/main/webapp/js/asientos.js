@@ -9,9 +9,9 @@ function seleccionAsiento(idAsiento) {
                 text: mensaje,
                 icon: 'success'
             }).then((result) => {
-                location.reload();  // Recarga la página después de cerrar el mensaje
+                location.reload();
             });
-        } else if (this.readyState === 4) {  // Si la petición termina pero el status no es 200
+        } else if (this.readyState === 4) {
             Swal.fire({
                 title: 'Error',
                 text: 'Hubo un error al procesar la solicitud.',
@@ -30,6 +30,3 @@ function seleccionAsiento(idAsiento) {
     xhr.send("accion=" + 'agregarAsiento' + "&idAsiento=" + idAsiento );
 }
 
-// function eliminarAsiento () {
-//
-// }

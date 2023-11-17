@@ -41,9 +41,9 @@ btnGuardar.addEventListener("click", function (event) {
                 text: mensaje,
                 icon: 'success'
             }).then((result) => {
-                location.reload();  // Recarga la página después de cerrar el mensaje
+                location.reload();// Recarga la página después de cerrar el mensaje
             });
-        } else if (this.readyState === 4) {  // Si la petición termina pero el status no es 200
+        } else if (this.readyState === 4) {// Si la petición termina pero el status no es 200
             Swal.fire({
                 title: 'Error',
                 text: 'Hubo un error al procesar la solicitud.',
@@ -59,7 +59,7 @@ btnGuardar.addEventListener("click", function (event) {
         });
     };
     xhr.send("accion=" + encodeURIComponent(accion) +
-        "&idMultimedia=" + encodeURIComponent(idMultimedia) +  // Asumiendo que este es el nombre correcto del parámetro
+        "&idMultimedia=" + encodeURIComponent(idMultimedia) +
         "&idPelicula=" + encodeURIComponent(idPelicula) +
         "&fechaEmision=" + encodeURIComponent(fechaEmision) +
         "&horaInicio=" + encodeURIComponent(horaInicio) +
@@ -79,7 +79,7 @@ function eliminarMultimedia(idMultimedia) {
         reverseButtons: true
     }).then((result) => {
         if (result.isConfirmed) {
-            // Si el usuario confirma, se realiza la petición AJAX para eliminar la venta.
+
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/multimediaControlador', true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -90,7 +90,7 @@ function eliminarMultimedia(idMultimedia) {
                         'La venta ha sido eliminada.',
                         'success'
                     ).then((result) => {
-                        location.reload();  // Recargar la página para reflejar la eliminación.
+                        location.reload();
                     });
                 } else {
                     Swal.fire(
@@ -107,11 +107,9 @@ function eliminarMultimedia(idMultimedia) {
 
 document.getElementById("calcularFecha").addEventListener("click", function() {
     event.preventDefault()
-    // Obtener la hora de inicio y la película seleccionada
     var horaInicio = document.getElementById("horaInicio").value;
     var peliculaSeleccionada = document.getElementById("idPelicula").value;
 
-    // Obtener la duración de la película seleccionada a partir del input oculto correspondiente
     var duracionPelicula = document.getElementById(peliculaSeleccionada).value;
 
     // Calcular la hora de finalización si la hora de inicio y la duración están disponibles
@@ -123,11 +121,8 @@ document.getElementById("calcularFecha").addEventListener("click", function() {
         // Formatear la hora de finalización al formato deseado y establecer el valor del input correspondiente
         document.getElementById("horaFin").value = fin.format("HH:mm");
     } else {
-        // Mostrar un mensaje de error si falta alguna información
         alert("Por favor, asegúrate de haber seleccionado una película y de haber ingresado una hora de inicio.");
     }
 });
 
-// No olvides incluir la biblioteca de Moment.js para facilitar el manejo de fechas y horas
-// Puedes incluirla en tu HTML con la siguiente etiqueta script:
-// <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+

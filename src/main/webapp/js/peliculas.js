@@ -41,7 +41,7 @@ btnGuardar.addEventListener("click", function (event) {
                 icon: 'success'
             }).then((result) => {
                 if(result.isConfirmed) {
-                    location.reload(); // Recarga la página después de cerrar el mensaje
+                    location.reload();
                 }
             });
         } else if (this.readyState === 4) {
@@ -80,7 +80,6 @@ function eliminarPelicula(idPelicula) {
         reverseButtons: true
     }).then((result) => {
         if (result.isConfirmed) {
-            // Si el usuario confirma, se realiza la petición AJAX para eliminar la película.
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/peliculasControlador', true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -92,7 +91,7 @@ function eliminarPelicula(idPelicula) {
                         'success'
                     ).then((result) => {
                         if(result.isConfirmed) {
-                            location.reload();  // Recargar la página para reflejar la eliminación.
+                            location.reload();
                         }
                     });
                 } else {
@@ -127,10 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var peliculasList = JSON.parse(xhr.responseText);
 
-                // Clear the previous content
                 document.getElementById("tablaPeliculas").innerHTML = "";
 
-                // Populate the table with the new data
                 peliculasList.forEach(function(peli) {
                     var row = '<tr>' +
                         '<td>' + peli.nombrePelicula + '</td>' +
@@ -152,7 +149,6 @@ document.addEventListener('DOMContentLoaded', function() {
         xhr.send();
     });
 
-    // Opcional: Búsqueda en tiempo real mientras escribe
     document.getElementById("buscarPelicula").addEventListener("keyup", function(e) {
         var buscarPelicula = this.value;
         var xhr = new XMLHttpRequest();
@@ -162,10 +158,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var peliculasList = JSON.parse(xhr.responseText);
 
-                // Clear the previous content
                 document.getElementById("tablaPeliculas").innerHTML = "";
 
-                // Populate the table with the new data
                 peliculasList.forEach(function(peli) {
                     var row = '<tr>' +
                         '<td>' + peli.nombrePelicula + '</td>' +
@@ -223,7 +217,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function validarDireccionSucursal(input) {
-        // Expresión regular para un número de teléfono de El Salvador con formato XXX-XXXX
         var regexDireccion = /^[a-zA-Z0-9- ]{1,100}$/;
         input.style.borderColor = regexDireccion.test(input.value) ? 'green' : 'red';
     }

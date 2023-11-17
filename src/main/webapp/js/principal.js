@@ -45,5 +45,5 @@ document.getElementById("btnBuscar").addEventListener("click", function(e) {
 
 document.getElementById("btnRefrescar").addEventListener("click", function(e) {
     e.preventDefault();
-    window.location.reload(); // Esto recargará la página
+    window.location.reload();
 });
