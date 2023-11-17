@@ -38,11 +38,11 @@ public class principalControlador extends HttpServlet {
                 int buscarSucursal = Integer.parseInt(request.getParameter("idSucursal"));
 
                 List listaBusqueda = multiDAO.buscarPrincipal(nombreBusqueda, buscarSucursal);
-                // Convertir la lista a JSON
+
                 Gson gson = new Gson();
                 String json = gson.toJson(listaBusqueda);
 
-                // Establecer el tipo de contenido a JSON y devolver la respuesta
+
                 response.setContentType("application/json");
                 response.setCharacterEncoding("UTF-8");
                 response.getWriter().write(json);

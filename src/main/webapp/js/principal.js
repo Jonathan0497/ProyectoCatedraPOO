@@ -11,7 +11,7 @@ document.getElementById("btnBuscar").addEventListener("click", function(e) {
             var peliculaList = JSON.parse(xhr.responseText);
 
             // Limpia el contenido anterior
-            var cardsContainer = document.getElementById("cardsContainer"); // Asegúrate de tener un contenedor con este id para tus tarjetas
+            var cardsContainer = document.getElementById("cardsContainer");
             cardsContainer.innerHTML = "";
 
             // Poblamos las tarjetas con la nueva data

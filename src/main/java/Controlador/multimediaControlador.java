@@ -60,7 +60,7 @@ public class multimediaControlador extends HttpServlet {
 
                 multiDAO.agregar2(multi);
                 if ("XMLHttpRequest".equals(requestedWithHeader)) {
-                    // Es una petición AJAX, devuelve la venta en formato JSON
+
                     response.setContentType("application/json");
                     response.setCharacterEncoding("UTF-8");
 
@@ -101,7 +101,7 @@ public class multimediaControlador extends HttpServlet {
 
                 multiDAO.modificar(multi);
                 if ("XMLHttpRequest".equals(requestedWithHeader)) {
-                    // Es una petición AJAX, devuelve la venta en formato JSON
+
                     response.setContentType("application/json");
                     response.setCharacterEncoding("UTF-8");
 
@@ -109,7 +109,7 @@ public class multimediaControlador extends HttpServlet {
                     String multiJson = gson.toJson(multi);
                     response.getWriter().write(multiJson);
                 } else {
-                    // No es una petición AJAX, redirige como de costumbre
+
                     response.sendRedirect("multimediaControlador?accion=listar");
                 }
                 break;

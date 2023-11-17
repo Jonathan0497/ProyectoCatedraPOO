@@ -137,10 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var salasList = JSON.parse(xhr.responseText);
 
-                // Clear the previous content
+                
                 document.getElementById("tablaSala").innerHTML = "";
 
-                // Populate the table with the new data
+
                 salasList.forEach(function(sala) {
                     var row = '<tr>' +
                         '<td>' + sala.numeroSala + '</td>' +

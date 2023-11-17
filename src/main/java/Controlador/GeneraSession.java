@@ -42,10 +42,10 @@ public class GeneraSession extends HttpServlet {
                 String query = "SELECT nombre, id_usuario FROM usuario WHERE correo = ? AND clave = ? LIMIT 1";
                 PreparedStatement pstmt = con.getConnection().prepareStatement(query);
                 pstmt.setString(1, usuario);
-                pstmt.setString(2, password);  // Suponiendo que hashPassword es una función que devuelve la versión hasheada de la contraseña
+                pstmt.setString(2, password);
                 ResultSet rs = pstmt.executeQuery();
 
-                if (rs.next()) {  // Si hay una coincidencia
+                if (rs.next()) {
                     sessionActual.setAttribute("USER", usuario);
                     sessionActual.setAttribute("NAME", rs.getString(1));
                     sessionActual.setAttribute("ID", rs.getInt(2));

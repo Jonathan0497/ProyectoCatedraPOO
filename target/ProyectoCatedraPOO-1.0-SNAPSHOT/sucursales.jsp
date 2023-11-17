@@ -96,7 +96,7 @@
     <div class="d-flex justify-content-between align-items-center my-3">
         <!-- Botón de Reporte -->
         <a href="JaspertReport2" class="btn btn-info">
-            <i class="bi bi-filetype-pdf"></i> Generar Reporte Salas
+            <i class="bi bi-filetype-pdf"></i> Generar Reporte Sucursal
         </a>
 
         <!-- Barra de Búsqueda -->

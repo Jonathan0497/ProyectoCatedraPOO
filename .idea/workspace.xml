@@ -10,35 +10,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54373b66-a928-4d92-95d8-dad7b62d1e50" name="Changes" comment="Se creo la logica de facturacion">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/JaspertReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/JaspertReport2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/ReportePrimeCinema1.jasper" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/ReportePrimeCinema2.jasper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e286809d-2e04-44b0-b276-f3b8ce3faab4.xml" afterDir="false" />
+    <list default="true" id="54373b66-a928-4d92-95d8-dad7b62d1e50" name="Changes" comment="Se agregaron los reportes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModeloDAO/salasDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModeloDAO/salasDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/GeneraSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controlador/GeneraSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/multimediaControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controlador/multimediaControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ModeloDAO/asientosDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModeloDAO/asientosDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ModeloDAO/sucursalesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModeloDAO/sucursalesDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/salas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/salas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/salas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/salas.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sucursales.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sucursales.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/usuario.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/Asientos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/Modelo/Asientos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/asientosDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/asientosDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/salasDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/salasDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/usuarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/ModeloDAO/usuarioDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/usuario.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/salas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/salas.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/classpath.index" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/WEB-INF/classes/classpath.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/salas.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/js/salas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/sucursales.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/sucursales.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Modelo/Asientos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/Asientos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ModeloDAO/asientosDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModeloDAO/asientosDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ModeloDAO/salasDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModeloDAO/salasDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ModeloDAO/usuarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModeloDAO/usuarioDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/classpath.index" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classpath.index" afterDir="false" />
     </list>
-    <list id="e95f95d3-8ae9-4303-8c1d-cd7687e73da7" name="Changes by Carlos" comment="Changes by Carlos" />
+    <list id="e95f95d3-8ae9-4303-8c1d-cd7687e73da7" name="Changes by Carlos" comment="Changes by Carlos">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/multimediaControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controlador/multimediaControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/peliculasControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controlador/peliculasControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/asientos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/asientos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/multimedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/multimedia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/peliculas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/peliculas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/principal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/principal.js" afterDir="false" />
+    </list>
     <list id="3d3977dc-8333-40ce-925b-83c31531188e" name="Changes by jonat" comment="" />
+    <list id="9ab6d065-d9eb-452a-9971-dc024dcd7db6" name="Changes by sebas" comment="">
+      <change beforePath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProyectoCatedraPOO-1.0-SNAPSHOT/index.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +60,17 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/Controlador/multimediaControlador.java">
+      <ranges>
+        <range start1="62" end1="63" start2="62" end2="63" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
+        <range start1="68" end1="69" start2="68" end2="69" changelist="e95f95d3-8ae9-4303-8c1d-cd7687e73da7" />
+        <range start1="71" end1="73" start2="71" end2="73" changelist="e95f95d3-8ae9-4303-8c1d-cd7687e73da7" />
+        <range start1="103" end1="104" start2="103" end2="104" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
+        <range start1="111" end1="112" start2="111" end2="112" changelist="54373b66-a928-4d92-95d8-dad7b62d1e50" />
+      </ranges>
+    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -307,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700180327750</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Se agregaron los reportes">
+      <option name="closed" value="true" />
+      <created>1700195349968</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700195349968</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +351,7 @@
     <MESSAGE value="Se agrego el registrarse ademas se añadieron validaciones a algunos formularios" />
     <MESSAGE value="Se elimino un comentario" />
     <MESSAGE value="Se creo la logica de facturacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se creo la logica de facturacion" />
+    <MESSAGE value="Se agregaron los reportes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregaron los reportes" />
   </component>
 </project>

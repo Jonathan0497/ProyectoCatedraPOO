@@ -43,7 +43,7 @@ public class sucursalesControlador extends HttpServlet {
 
                 sucursalDAO.agregar(sucursal);
                 if ("XMLHttpRequest".equals(requestedWithHeader)) {
-                    // Es una petición AJAX, devuelve la venta en formato JSON
+
                     response.setContentType("application/json");
                     response.setCharacterEncoding("UTF-8");
 
@@ -51,7 +51,7 @@ public class sucursalesControlador extends HttpServlet {
                     String sucursalJson = gson.toJson(sucursal);
                     response.getWriter().write(sucursalJson);
                 } else {
-                    // No es una petición AJAX, redirige como de costumbre
+
                     response.sendRedirect("sucursalesControlador?accion=listar");
                 }
                 break;
@@ -71,7 +71,7 @@ public class sucursalesControlador extends HttpServlet {
                 sucursalDAO.modificar(sucursal);
 
                 if ("XMLHttpRequest".equals(requestedWithHeader)) {
-                    // Es una petición AJAX, devuelve la venta en formato JSON
+
                     response.setContentType("application/json");
                     response.setCharacterEncoding("UTF-8");
 
@@ -79,7 +79,7 @@ public class sucursalesControlador extends HttpServlet {
                     String sucursalJson = gson.toJson(sucursal);
                     response.getWriter().write(sucursalJson);
                 } else {
-                    // No es una petición AJAX, redirige como de costumbre
+
                     response.sendRedirect("sucursalesControlador?accion=listar");
                 }
                 break;
@@ -91,11 +91,11 @@ public class sucursalesControlador extends HttpServlet {
             case "buscar":
                 String nombreBusqueda = request.getParameter("buscarSucursal");
                 List listaBusqueda = sucursalDAO.buscar(nombreBusqueda);
-                // Convertir la lista a JSON
+
                 Gson gson = new Gson();
                 String json = gson.toJson(listaBusqueda);
 
-                // Establecer el tipo de contenido a JSON y devolver la respuesta
+
                 response.setContentType("application/json");
                 response.setCharacterEncoding("UTF-8");
                 response.getWriter().write(json);

@@ -94,7 +94,7 @@ public class asientosDAO {
         try {
             Connection con = cn.getConnection();
 
-            // Crear factura
+
             String sqlFactura = "INSERT INTO facturacion (fecha_emision, id_usuario, metodo_pago, total) VALUES (NOW(), ?, 'Efectivo', 0.00)";
             PreparedStatement psFactura = con.prepareStatement(sqlFactura, Statement.RETURN_GENERATED_KEYS);
             psFactura.setInt(1, Reserva.getIdUsuario());
@@ -106,7 +106,7 @@ public class asientosDAO {
                 idFacturacion = generatedKeysFactura.getInt(1);
             }
 
-            // Crear tickets
+
             String sqlTicket = "INSERT INTO ticket (fecha_emision, id_multimedia, id_asiento, id_usuario, id_precio) VALUES (NOW(), ?, ?, ?, ?)";
             PreparedStatement psTicket = con.prepareStatement(sqlTicket, Statement.RETURN_GENERATED_KEYS);
             psTicket.setInt(1, Reserva.getIdMultimedia());
@@ -120,12 +120,12 @@ public class asientosDAO {
                 psTicket.executeUpdate();
                 cantidadTickets++;
 
-                // Obtener las claves generadas para los tickets
+
                 ResultSet generatedKeysTicket = psTicket.getGeneratedKeys();
                 while (generatedKeysTicket.next()) {
                     int idTicket = generatedKeysTicket.getInt(1);
 
-                    // Insertar en factura_ticket
+
                     String sqlFacturaTicket = "INSERT INTO factura_ticket (id_facturacion, id_ticket) VALUES (?, ?)";
                     PreparedStatement psFacturaTicket = con.prepareStatement(sqlFacturaTicket);
                     psFacturaTicket.setInt(1, idFacturacion);
@@ -137,7 +137,7 @@ public class asientosDAO {
                 }
             }
 
-            // Actualizar el total y la cantidad en la factura
+
             String sqlUpdateFactura = "UPDATE facturacion SET total = ?, cantidad = ? WHERE id_facturacion = ?";
             PreparedStatement psUpdateFactura = con.prepareStatement(sqlUpdateFactura);
             psUpdateFactura.setBigDecimal(1, totalTicketsPagados);
@@ -145,7 +145,7 @@ public class asientosDAO {
             psUpdateFactura.setInt(3, idFacturacion);
             psUpdateFactura.executeUpdate();
 
-            // Reiniciar valores después de completar todas las inserciones
+
             Reserva.reiniciarValores();
 
         } catch (SQLException e) {

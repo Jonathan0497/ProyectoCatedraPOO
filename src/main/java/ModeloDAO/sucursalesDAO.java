@@ -75,7 +75,7 @@ public class sucursalesDAO {
                 "FROM sucursales\n" +
                 "INNER JOIN usuario ON sucursales.id_usuario = usuario.id_usuario\n" +
                 "WHERE sucursales.nombre LIKE ?\n";
-        //String sql = "SELECT id_venta, fecha_venta FROM ventas WHERE rl_nombre LIKE ?";
+
         List<sucursales> lista = new ArrayList<>();
 
         try {

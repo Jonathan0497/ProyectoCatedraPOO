@@ -27,7 +27,7 @@ btnGuardar.addEventListener("click", function (event) {
     let idTipo = document.getElementById("idTipo").value;
     let mensaje;
 
-    // Determina si se está agregando o modificando un usuario
+
     let accion = idUsuario ? "modificar" : "agregar";
 
     if (accion === "modificar") {
@@ -38,7 +38,7 @@ btnGuardar.addEventListener("click", function (event) {
         mensaje = "Los datos se agregaron con éxito";
     }
 
-    // Configura la solicitud AJAX
+
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "/usuarioControlador", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -50,17 +50,17 @@ btnGuardar.addEventListener("click", function (event) {
                     text: mensaje,
                     icon: 'success'
                 }).then((result) => {
-                    location.reload();  // Recarga la página después de cerrar el mensaje
+                    location.reload();
                 });
             } else if (this.status === 409) {
-                // Manejo específico para DUI duplicado
+
                 Swal.fire({
                     title: 'Error',
-                    text: this.responseText, // Usa el mensaje del servidor
+                    text: this.responseText,
                     icon: 'error'
                 });
             } else {
-                // Manejo de otros errores
+
                 let errorMensaje = this.responseText || 'Hubo un error al procesar la solicitud.';
                 Swal.fire({
                     title: 'Error',
@@ -78,7 +78,7 @@ btnGuardar.addEventListener("click", function (event) {
         });
     };
 
-    // Envía los datos al servidor
+
     xhr.send("accion=" + encodeURIComponent(accion) +
         "&idUsuario=" + encodeURIComponent(idUsuario) +
         "&nombreUsuario=" + encodeURIComponent(nombreUsuario) +
@@ -91,7 +91,7 @@ btnGuardar.addEventListener("click", function (event) {
         "&idTipo=" + encodeURIComponent(idTipo));
 });
 
-// Supongo que este evento se dispara al hacer clic en un botón "Eliminar" para un usuario
+
 function eliminarUsuario(idUsuario) {
     Swal.fire({
         title: '¿Estás seguro?',
@@ -115,9 +115,9 @@ function eliminarUsuario(idUsuario) {
                         text: 'El usuario ha sido eliminado.',
                         icon: 'success'
                     }).then((result) => {
-                        location.reload(); // Recarga la página después de cerrar el mensaje
+                        location.reload();
                     });
-                } else if (this.readyState === 4) { // Si la petición termina pero el status no es 200
+                } else if (this.readyState === 4) {
                     Swal.fire({
                         title: 'Error',
                         text: 'Hubo un error al procesar la solicitud.',
@@ -202,10 +202,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var usuarioList = JSON.parse(xhr.responseText);
 
-                // Clear the previous content
+
                 document.getElementById("tablaUsuario").innerHTML = "";
 
-                // Populate the table with the new data
+
                 usuarioList.forEach(function(usu) {
                     var row = '<tr>' +
                         '<td>' + usu.nombreUsuario + ' ' + usu.apellidoUsuario + '</td>' +

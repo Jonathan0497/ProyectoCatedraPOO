@@ -54,7 +54,7 @@ public class usuarioControlador extends HttpServlet {
 
                 usuDAO.agregar(usu);
                 if ("XMLHttpRequest".equals(requestedWithHeader)) {
-                    // Es una petición AJAX, devuelve la venta en formato JSON
+
                     response.setContentType("application/json");
                     response.setCharacterEncoding("UTF-8");
 
@@ -62,7 +62,7 @@ public class usuarioControlador extends HttpServlet {
                     String usuJson = gson.toJson(usu);
                     response.getWriter().write(usuJson);
                 } else {
-                    // No es una petición AJAX, redirige como de costumbre
+
                     response.sendRedirect("usuarioControlador?accion=listar");
                 }
 
@@ -88,7 +88,7 @@ public class usuarioControlador extends HttpServlet {
 
                 usuDAO.modificar(usu);
                 if ("XMLHttpRequest".equals(requestedWithHeader)) {
-                    // Es una petición AJAX, devuelve la venta en formato JSON
+
                     response.setContentType("application/json");
                     response.setCharacterEncoding("UTF-8");
 
@@ -96,7 +96,7 @@ public class usuarioControlador extends HttpServlet {
                     String usuJson = gson.toJson(usu);
                     response.getWriter().write(usuJson);
                 } else {
-                    // No es una petición AJAX, redirige como de costumbre
+
                     response.sendRedirect("usuarioControlador?accion=listar");
                 }
                 break;
@@ -108,11 +108,11 @@ public class usuarioControlador extends HttpServlet {
             case "buscar":
                 String nombreBusqueda = request.getParameter("buscarUsuario");
                 List listaBusqueda = usuDAO.buscar(nombreBusqueda);
-                // Convertir la lista a JSON
+
                 Gson gson = new Gson();
                 String json = gson.toJson(listaBusqueda);
 
-                // Establecer el tipo de contenido a JSON y devolver la respuesta
+
                 response.setContentType("application/json");
                 response.setCharacterEncoding("UTF-8");
                 response.getWriter().write(json);
