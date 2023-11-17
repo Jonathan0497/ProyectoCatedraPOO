@@ -91,33 +91,59 @@ public class asientosDAO {
     public BigDecimal crearTickets() {
         BigDecimal totalTicketsPagados = BigDecimal.ZERO;
 
-        try  {
+        try {
             Connection con = cn.getConnection();
-            String sql = "INSERT INTO ticket (fecha_emision, id_multimedia, id_asiento, id_usuario, id_precio) VALUES (NOW(), ?, ?, ?, ?)";
 
-                PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-                ps.setInt(1, Reserva.getIdMultimedia());
-                ps.setInt(3, Reserva.getIdUsuario());
-                ps.setInt(4, Reserva.getIdPrecio());
+            // Crear factura
+            String sqlFactura = "INSERT INTO facturacion (fecha_emision, id_usuario, metodo_pago, total) VALUES (NOW(), ?, 'Efectivo', 0.00)";
+            PreparedStatement psFactura = con.prepareStatement(sqlFactura, Statement.RETURN_GENERATED_KEYS);
+            psFactura.setInt(1, Reserva.getIdUsuario());
+            psFactura.executeUpdate();
 
-                for (Integer idAsiento : Reserva.getIdAsientos()) {
-                    ps.setInt(2, idAsiento);
-                    ps.executeUpdate();
+            int idFacturacion = 0;
+            ResultSet generatedKeysFactura = psFactura.getGeneratedKeys();
+            if (generatedKeysFactura.next()) {
+                idFacturacion = generatedKeysFactura.getInt(1);
+            }
 
-                    // Obtener las claves generadas (puede haber varias si se insertaron varios registros)
-                    try {
-                        ResultSet generatedKeys = ps.getGeneratedKeys();
-                        while (generatedKeys.next()) {
-                            int idTicket = generatedKeys.getInt(1);
+            // Crear tickets
+            String sqlTicket = "INSERT INTO ticket (fecha_emision, id_multimedia, id_asiento, id_usuario, id_precio) VALUES (NOW(), ?, ?, ?, ?)";
+            PreparedStatement psTicket = con.prepareStatement(sqlTicket, Statement.RETURN_GENERATED_KEYS);
+            psTicket.setInt(1, Reserva.getIdMultimedia());
+            psTicket.setInt(3, Reserva.getIdUsuario());
+            psTicket.setInt(4, Reserva.getIdPrecio());
 
-                            // Sumar al total el precio asociado a este ticket
-                            totalTicketsPagados = totalTicketsPagados.add(obtenerTotalPrecioPorTicket(idTicket));
-                        }
-                    } catch (SQLException e) {
-                        throw new RuntimeException(e);
-                    }
+            int cantidadTickets = 0;
+
+            for (Integer idAsiento : Reserva.getIdAsientos()) {
+                psTicket.setInt(2, idAsiento);
+                psTicket.executeUpdate();
+                cantidadTickets++;
+
+                // Obtener las claves generadas para los tickets
+                ResultSet generatedKeysTicket = psTicket.getGeneratedKeys();
+                while (generatedKeysTicket.next()) {
+                    int idTicket = generatedKeysTicket.getInt(1);
+
+                    // Insertar en factura_ticket
+                    String sqlFacturaTicket = "INSERT INTO factura_ticket (id_facturacion, id_ticket) VALUES (?, ?)";
+                    PreparedStatement psFacturaTicket = con.prepareStatement(sqlFacturaTicket);
+                    psFacturaTicket.setInt(1, idFacturacion);
+                    psFacturaTicket.setInt(2, idTicket);
+                    psFacturaTicket.executeUpdate();
+
+                    // Sumar al total el precio asociado a este ticket
+                    totalTicketsPagados = totalTicketsPagados.add(obtenerTotalPrecioPorTicket(idTicket));
                 }
+            }
 
+            // Actualizar el total y la cantidad en la factura
+            String sqlUpdateFactura = "UPDATE facturacion SET total = ?, cantidad = ? WHERE id_facturacion = ?";
+            PreparedStatement psUpdateFactura = con.prepareStatement(sqlUpdateFactura);
+            psUpdateFactura.setBigDecimal(1, totalTicketsPagados);
+            psUpdateFactura.setInt(2, cantidadTickets);
+            psUpdateFactura.setInt(3, idFacturacion);
+            psUpdateFactura.executeUpdate();
 
             // Reiniciar valores después de completar todas las inserciones
             Reserva.reiniciarValores();
