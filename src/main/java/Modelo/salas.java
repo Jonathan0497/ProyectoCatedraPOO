@@ -25,7 +25,13 @@ public class salas {
         this.idSucursal = idSucursal;
     }
 
+    public Integer getEntradasVendidas() {
+        return entradasVendidas;
+    }
 
+    public void setEntradasVendidas(Integer entradasVendidas) {
+        this.entradasVendidas = entradasVendidas;
+    }
 
     public salas() {
 
@@ -40,6 +46,8 @@ public class salas {
     private Integer id;
     private Integer numeroSala;
     private Integer idSucursal;
+    private Integer entradasVendidas;
+
 
     public String getSucursal() {
         return Sucursal;

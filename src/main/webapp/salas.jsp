@@ -98,6 +98,7 @@
             <tr>
                 <th>Numero sala</th>
                 <th>Sucursal</th>
+                <th>Entradas Vendidas</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
             </tr>
@@ -107,6 +108,7 @@
                 <tr>
                     <td>${sa.numeroSala}</td>
                     <td>${sa.getSucursal()}</td>
+                    <td>${sa.getEntradasVendidas()}</td>
                     <td>
                         <a class="btn btn-primary" onclick="datos('${sa.id}','${sa.numeroSala}', '${sa.idSucursal}')">Editar</a>
                     </td>

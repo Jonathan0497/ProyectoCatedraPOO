@@ -28,7 +28,9 @@
   <p>¡Gracias por tu compra! Tu pedido ha sido procesado con éxito.</p>
   <p>Total: <strong>${totalPagado}</strong></p>
   <a href="principalControlador?accion=listar" class="btn">Volver a la Tienda</a>
+
 </div>
 
+<script src="js/compraExitosa.js"></script>
 </body>
 </html>

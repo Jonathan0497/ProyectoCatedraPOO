@@ -27,9 +27,22 @@ public class salasDAO {
     int re;
 
     public List listar(){
-        String sql = "SELECT salas.id_salas, salas.numero_sala, sucursales.id_sucursales, sucursales.nombre\n" +
-                "FROM salas\n" +
-                "INNER JOIN sucursales ON salas.id_sucursales = sucursales.id_sucursales;\n";
+        String sql = "SELECT \n" +
+                "    s.id_salas AS SalaID,\n" +
+                "    s.numero_sala AS NumeroSala,\n" +
+                "    suc.id_sucursales AS SucursalID,\n" +
+                "    suc.nombre AS NombreSucursal,\n" +
+                "    COALESCE(COUNT(t.id_ticket), 'n/a') AS CantidadEntradasVendidas\n" +
+                "FROM \n" +
+                "    salas s\n" +
+                "    LEFT JOIN asientos a ON s.id_salas = a.id_salas\n" +
+                "    LEFT JOIN ticket t ON a.id_asiento = t.id_asiento\n" +
+                "    INNER JOIN sucursales suc ON s.id_sucursales = suc.id_sucursales\n" +
+                "GROUP BY \n" +
+                "    s.id_salas, \n" +
+                "    s.numero_sala,\n" +
+                "    suc.id_sucursales,\n" +
+                "    suc.nombre;";
         List<salas> lista = new ArrayList<>();
 
         try {
@@ -39,10 +52,11 @@ public class salasDAO {
 
             while(rs.next()){
                 salas sala = new salas();
-                sala.setId(rs.getInt("id_salas"));
-                sala.setNumeroSala(rs.getInt("numero_sala"));
-                sala.setIdSucursal(rs.getInt("id_sucursales"));
-                sala.setSucursal(rs.getString("nombre"));
+                sala.setId(rs.getInt("SalaID"));
+                sala.setNumeroSala(rs.getInt("NumeroSala"));
+                sala.setIdSucursal(rs.getInt("SucursalID"));
+                sala.setSucursal(rs.getString("NombreSucursal"));
+                sala.setEntradasVendidas(rs.getInt("CantidadEntradasVendidas"));
                 lista.add(sala);
             }
         } catch (SQLException e) {
@@ -72,11 +86,20 @@ public class salasDAO {
     }
 
     public List buscar(String nombre){
-        String sql = "SELECT salas.id_salas, salas.numero_sala, sucursales.id_sucursales, sucursales.nombre\n" +
-                "FROM salas\n" +
-                "INNER JOIN sucursales ON salas.id_sucursales = sucursales.id_sucursales\n" +
-                "WHERE sucursales.nombre LIKE ?\n";
-        //String sql = "SELECT id_venta, fecha_venta FROM ventas WHERE rl_nombre LIKE ?";
+        String sql = "SELECT \n" +
+                "    s.id_salas AS SalaID,\n" +
+                "    s.numero_sala AS NumeroSala,\n" +
+                "    suc.id_sucursales AS SucursalID,\n" +
+                "    suc.nombre AS NombreSucursal,\n" +
+                "    COALESCE(COUNT(t.id_ticket), 'n/a') AS CantidadEntradasVendidas\n" +
+                "FROM \n" +
+                "    salas s\n" +
+                "    LEFT JOIN asientos a ON s.id_salas = a.id_salas\n" +
+                "    LEFT JOIN ticket t ON a.id_asiento = t.id_asiento\n" +
+                "    INNER JOIN sucursales suc ON s.id_sucursales = suc.id_sucursales\n" +
+                "WHERE \n" +
+                "    suc.nombre LIKE ?;\n";
+
         List<salas> lista = new ArrayList<>();
 
         try {
@@ -87,10 +110,11 @@ public class salasDAO {
 
             while(rs.next()){
                 salas sala = new salas();
-                sala.setId(rs.getInt("id_salas"));
-                sala.setNumeroSala(rs.getInt("numero_sala"));
-                sala.setIdSucursal(rs.getInt("id_sucursales"));
-                sala.setSucursal(rs.getString("nombre"));
+                sala.setId(rs.getInt("SalaID"));
+                sala.setNumeroSala(rs.getInt("NumeroSala"));
+                sala.setIdSucursal(rs.getInt("SucursalID"));
+                sala.setSucursal(rs.getString("NombreSucursal"));
+                sala.setEntradasVendidas(rs.getInt("CantidadEntradasVendidas"));
                 lista.add(sala);
             }
         } catch (SQLException e) {
